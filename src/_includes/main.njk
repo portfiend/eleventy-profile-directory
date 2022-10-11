@@ -1,0 +1,39 @@
+---
+siteTitle: Webbed Site
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{siteTitle}}{% if pageTitle %} | {{pageTitle}} {% endif %}</title>
+	<link rel="stylesheet" href="/assets/css/main.css">
+
+	{% if stylesheet %}
+	<link rel="stylesheet" href="/assets/css/{{stylesheet}}">
+	{% endif %}
+	{% if pageStylesheet %}
+	<link rel="stylesheet" href="/assets/css/{{pageStylesheet}}">
+	{% endif %}
+	
+</head>
+<body>
+	<div class="lightbox-modal hidden" onClick="closeLightbox()">
+		<div class="lightbox-content">
+			<img src="" alt="" class="lightbox-image">
+			<div class="lightbox-caption"></div>	
+		</div>
+		<script src="/assets/js/lightbox.js"></script>
+	</div>
+
+	<div class="container">
+		<h1>{{ pageTitle if pageTitle else siteTitle }}</h1>
+
+		<div class="content">
+			{{ content | safe }}
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<ul class="gallery">
+{% for image in _galleryImages %}
+{% set _photoSrc = image[0] %}
+{% set _photoAlt = image[1] %}
+<li>{% include '_photo.njk' %}</li>
+{% endfor %}
+<li></li>
+</ul>

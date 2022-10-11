@@ -1,0 +1,13 @@
+
+<ul class="profile-navigation">
+{% for profile in collections.profile %}
+<li {% if page.url == profile.url %} aria-current="page" class="current-page" {% endif %}>
+<a href="{{profile.url}}" class="nav-button">
+{% if profile.data.buttonTitle %}{{profile.data.buttonTitle}}
+{% elif profile.data.pageTitle %}{{profile.data.pageTitle}}
+{% else %}{{profile.fileSlug}}
+{% endif %}
+</a>
+</li>
+{% endfor %}
+</ul>

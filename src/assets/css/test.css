@@ -1,0 +1,16 @@
+h1, h2, h3 {
+	color: gold;
+}
+
+.container {
+	background-color: teal;
+	border-color: darkslategrey;
+	width: 800px;
+}
+
+.nav-button {
+	background-color: gold;
+	color: #333;
+	border: 2px solid orangered;
+	box-shadow: 4px 4px orangered;
+}
